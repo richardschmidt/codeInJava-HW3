@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package student;
+
+/**
+ * @author richa_000
+ *
+ */
+public class Student {
+
+private long studentId;
+private String fullName;
+private String major;
+
+public Student(){
+	studentId = 0;
+	fullName = "";
+	major = "";
+}
+public long getStudentId(){
+	return (studentId);
+}
+public void setStudentId(long aStudentId){
+	studentId = aStudentId;
+}
+public String getFullName(){
+	return (fullName);
+}
+public void setFullName(String aFullName){
+	fullName = aFullName;
+}
+public String getMajor(){
+	return (major);
+}
+public void setMajor(String aMajor){
+	major = aMajor;
+}
+public void displayStudentInfo(){
+	System.out.println("Student ID: " + studentId + " Full Name: " + fullName + " Major: " + major);
+}
+}

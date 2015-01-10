@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package book;
+
+import java.util.*;
+public class BookDisplayer {
+
+
+	public static void main(String[] args) {
+		Book aBook = new Book();
+		long inputIsbn = 0;
+		String inputTitle = "";
+		String inputAuthor = "";
+		String inputEdition = "";
+		Scanner inReader = new Scanner (System.in);
+		
+	System.out.println("Input ISBN!");
+		inputIsbn = inReader.nextLong();
+		while (inputIsbn < 0){System.out.println("Incorrect input! ISBN cannot be a negative value!");
+		inputIsbn = inReader.nextLong();
+		}
+	
+	String temp = inReader.nextLine();
+		
+	System.out.println("Input Book Title!");
+		inputTitle = inReader.nextLine();
+		while (inputTitle.equals("")){System.out.println("Incorrect input! Book Title cannot be blank!");
+		inputTitle = inReader.nextLine();	
+		}
+		
+	System.out.println("Input Author's Name!");
+		inputAuthor = inReader.nextLine();
+		while (inputAuthor.equals("")){System.out.println("Incorrect input! Author's name cannot be blank!");
+		inputAuthor = inReader.nextLine();	
+		}
+	
+	System.out.println("Input Book Edition! (ex. 1st Edition, 2nd Edition, etc.");
+		inputEdition = inReader.nextLine();
+		while (inputEdition.equals("")){System.out.println("Incorrect input! Book Edition cannot be blank!");
+		inputEdition = inReader.nextLine();	
+		}
+		
+	aBook.setIsbn(inputIsbn);
+	aBook.setTitle(inputTitle);
+	aBook.setAuthor(inputAuthor);
+	aBook.setEdition(inputEdition);
+	aBook.displayBookInfo();
+	}
+
+}

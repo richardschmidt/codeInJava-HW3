@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package student;
+
+import java.util.*;
+public class StudentDisplayer {
+
+	
+	public static void main(String[] args) {
+		
+		Student studentArray[] = new Student[3];
+		
+		for (int i = 0; i<studentArray.length; i++){
+			studentArray[i] = new Student();
+		}
+		
+		Scanner inReader = new Scanner(System.in);
+		
+		long inputStudentId = 0;
+		String inputFullName = "";
+		String inputMajor = "";
+		
+		int studentIndex = 1;
+		
+		for (int j = 0; j < studentArray.length; j++){
+			System.out.println("Enter a student ID for Student #" + studentIndex + ":");
+			inputStudentId = inReader.nextLong();
+			studentArray[j].setStudentId(inputStudentId);
+			
+			String temp = inReader.nextLine();
+			
+			System.out.println("Enter a full name for Student #" + studentIndex + ":");
+			inputFullName = inReader.nextLine();
+			studentArray[j].setFullName(inputFullName);
+			
+			System.out.println("Enter a major for Student #" + studentIndex + ":");
+			inputMajor = inReader.nextLine();
+			studentArray[j].setMajor(inputMajor);
+			
+			studentIndex++;
+		}
+		for (int k = 0; k<studentArray.length; k++){
+			studentArray[k].displayStudentInfo();
+		}
+	}
+
+}

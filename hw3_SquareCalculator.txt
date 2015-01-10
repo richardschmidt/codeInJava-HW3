@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package square;
+import java.util.*;
+
+public class SquareCalculator {
+
+
+	public static void main(String[] args) {
+	
+	Square aSquare = new Square();
+	double inputSideLength;	
+	String units;
+	
+	Scanner inReader = new Scanner (System.in);
+	
+	
+	
+	System.out.println("Input length of side?");
+	inputSideLength = inReader.nextDouble();
+	while (inputSideLength < 0){System.out.println("Incorrect input: try again!");
+	inputSideLength = inReader.nextDouble();
+	}
+	String temp = inReader.nextLine();
+	
+	System.out.println("Input units of measure? (Units in:in, ft, cm, or m)");
+	units = inReader.nextLine();
+	while (!units.equals("ft") && !units.equals("in") && !units.equals("cm") && !units.equals("m")){System.out.println("Incorrect input! Please use in, ft, cm, or m!");
+	units = inReader.nextLine();
+	}
+	
+	aSquare.setSideLength(inputSideLength); 
+	
+	double area = aSquare.calculateSquareArea();
+	double perimeter = aSquare.calculateSquarePerimeter();
+	
+	System.out.printf("Perimeter of the square: %10.2f %2s \n", perimeter, units);
+	System.out.printf("Area of the square: %15.2f %2s \n", area, units);
+	}
+
+
+}

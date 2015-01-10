@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package book;
+
+/**
+ * @author richa_000
+ *
+ */
+public class Book {
+
+	private long isbn;
+	private String title;
+	private String author;
+	private String edition;
+	
+	public Book() {isbn = 0;
+	title = "";
+	author = "";
+	edition = "";
+	}
+	public double getIsbn(){
+		return (isbn);
+	}
+	public void setIsbn(long aIsbn){
+		isbn = aIsbn;
+	}
+	public String getTitle(){
+		return (title);
+	}
+	public void setTitle(String aTitle){
+		title = aTitle;
+	}
+	public String getAuthor(){
+		return (author);
+	}
+	public void setAuthor(String aAuthor){
+		author = aAuthor;
+	}
+	public String getEdition(){
+		return (edition);
+	}
+	public void setEdition(String aEdition){
+		edition = aEdition;
+	}
+	public void displayBookInfo(){
+		System.out.println("ISBN: " + isbn + " Title: " + title + " Author: " + author + " Edition: " + edition);
+	}
+	}

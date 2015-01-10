@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package square;
+
+/**
+ * @author richa_000
+ *
+ */
+public class Square {
+private double sideLength;
+
+public Square(){sideLength = 0;
+}
+public double getSideLength(){return (sideLength);
+}
+public void setSideLength(double aSideLength){sideLength = aSideLength;
+}
+public double calculateSquareArea(){return (sideLength * sideLength);
+}
+public double calculateSquarePerimeter(){return (4 * sideLength);
+}
+
+	
+}
